@@ -1,25 +1,86 @@
-.projects-section{
-    background: #f8fafc;
+.projects-section {
+  background: #f8fafc;
 }
 
-.projects-card{
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    overflow: hidden;
+.project-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
-.projects-card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
-.projects-image{
-    height: 200px;
-    object-fit: cover;
+.project-card img {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.project-card .btn{
-    font-size: 0.9rem;
-    border-radius: 20px;
+.project-card .card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card .card-title {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.25rem;
+}
+
+.project-card .card-text {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.project-card .btn {
+  font-size: 0.85rem;
+  border-radius: 20px;
+  padding: 6px 18px;
+}
+
+.project-card .btn-outline-primary {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.project-card .btn-outline-primary:hover {
+  background-color: #6366f1;
+  color: white;
+}
+
+.project-card .btn-primary {
+  background-color: #38bdf8;
+  border: none;
+}
+
+.project-card .btn-primary:hover {
+  background-color: #0ea5e9;
+}
+
+@media (max-width: 768px) {
+  .project-card img {
+    height: 180px;
+  }
+
+  .project-card .card-title {
+    font-size: 1.1rem;
+  }
+
+  .project-card .card-text {
+    font-size: 0.85rem;
+  }
+
+  .project-card .btn {
+    padding: 5px 14px;
+    font-size: 0.8rem;
+  }
 }

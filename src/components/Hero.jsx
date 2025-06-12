@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { ReactTyped } from "react-typed";
 import "../styles/hero.css";
+import profilephoto from "../assets/profilephoto.jpg";
 function Hero() {
   return (
     <section
@@ -42,7 +43,7 @@ function Hero() {
           <Col md={6} className="text-center mt-5 mt-md-0">
             <div className="hero-image-wrapper">
               <img
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+                src={profilephoto}
                 alt="Profile"
                 className="hero-image rounded-circle shadow-lg"
               />

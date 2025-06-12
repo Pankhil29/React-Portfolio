@@ -13,7 +13,7 @@
     color: #67e8f9 !important;
 }
 .nav-link{
-    color: #cbd5e1 !important;
+    /* color: #cbd5e1 !important; */
     font-weight: 500;
     margin-left: 15px;
     transition: all 0.3s ease ;

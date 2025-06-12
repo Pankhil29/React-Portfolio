@@ -1,28 +1,30 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "../styles/projects.css";
-
+import calculator from "../assets/calculator.png";
+import tictactoe from "../assets/tictactoe.png";
+import numberpuzzle from "../assets/numberpuzzle.png";
 const projects = [
   {
     title: "React Calculator",
     description: "A simple calculator app build using React.",
-    img: "https://via.placeholder.com/300x200",
-    github: "https://github.com/yourusername/calculator",
-    demo: "https://yourdemo.com/calculator",
+    img: calculator,
+    github: "https://github.com/Pankhil29/React-Calculator",
+    demo: "https://pankhil29.github.io/React-Calculator/",
   },
   {
     title: "Tic Tac Toe",
     description: "Classic 2-player game using HTML, CSS & JS.",
-    img: "https://via.placeholder.com/300x200",
-    github: "https://github.com/yourusername/tictactoe",
-    demo: "https://yourdemo.com/tictactoe",
+    img: tictactoe,
+    github: "https://github.com/Pankhil29/TIC-TAC-TOE-GAME",
+    demo: "https://pankhil29.github.io/TIC-TAC-TOE-GAME/",
   },
   {
-    title: "Restaurant Website",
-    description: "Responsive food site UI built with Bootstrap.",
-    img: "https://via.placeholder.com/300x200",
-    github: "https://github.com/yourusername/restaurant",
-    demo: "https://yourdemo.com/restaurant",
+    title: "Number Puzzle Game",
+    description: "Number puzzle using Js logic",
+    img: numberpuzzle,
+    github: "https://github.com/Pankhil29/Number-Puzzle-Game",
+    demo: " https://pankhil29.github.io/Number-Puzzle-Game/",
   },
 ];
 
