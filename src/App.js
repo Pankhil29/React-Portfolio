@@ -22,9 +22,10 @@ function App() {
       const sections = document.querySelectorAll("section[id]");
       let current = "home";
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop; // distance of top of( page ,to section)
+        const sectionHeight = section.offsetHeight; //total height of that section
         if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          // /3 gives smoother effect
           current = section.getAttribute("id");
         }
       });
@@ -79,7 +80,7 @@ function App() {
           />
         </a>
         <a
-          href="https://linkedin.com/in/pankhil-patel"
+          href="https://www.linkedin.com/in/pankhil-patel-5085aa299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
           target="_blank"
           rel="noreferrer"
         >
