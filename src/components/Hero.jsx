@@ -17,7 +17,7 @@ function Hero() {
               Hi, I'm <span className="text-info">Pankhil Patel</span>
             </h1>
             <h3 className="mb-3">
-              <ReactTyped
+              {/* <ReactTyped
                 strings={[
                   "Frontend Developer",
                   "React Enthusiast",
@@ -26,7 +26,9 @@ function Hero() {
                 typeSpeed={60}
                 backSpeed={30}
                 loop
-              />
+              /> */}
+              Fr<span className="text-info">o</span>ntend Devel
+              <span className="text-info">o</span>per
             </h3>
             <p className="lead">
               I design and develop responsive, user-friendly websites and apps.
