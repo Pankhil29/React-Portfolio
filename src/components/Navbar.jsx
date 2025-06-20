@@ -11,7 +11,8 @@ function Navbar({ activeSection, setActiveSection }) {
     <BootstrapNavbar expand="lg" bg="dark" variant="dark" fixed="top">
       <Container>
         <BootstrapNavbar.Brand href="#home">
-          <i className="fas fa-code me-2"></i>MyPortfolio
+          <i className="fas fa-code me-2"></i>
+          Pankhil Patel
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controlls="navbar-nav" />
         <BootstrapNavbar.Collapse id="navbar-nav">

@@ -12,6 +12,10 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+import Resume from "./assets/resume.png";
+import Github from "./assets/Githubwhite.png";
+import Linkedin from "./assets/linkedin.png";
+
 function App() {
   const [activeSection, setActiveSection] = useState("home");
 
@@ -68,26 +72,17 @@ function App() {
           className="resume-button"
           title="Download Resume"
         >
-          <img
-            src="https://img.icons8.com/ios-filled/30/ffffff/resume.png"
-            alt="Resume"
-          />
+          <img src={Resume} alt="Resume" />
         </a>
         <a href="https://github.com/Pankhil29" target="_blank" rel="noreferrer">
-          <img
-            src="https://img.icons8.com/ios-filled/30/ffffff/github.png"
-            alt="github"
-          />
+          <img src={Github} alt="github" />
         </a>
         <a
           href="https://www.linkedin.com/in/pankhil-patel-5085aa299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png"
-            alt="LinkedIn"
-          />
+          <img src={Linkedin} alt="LinkedIn" />
         </a>
       </div>
     </>
