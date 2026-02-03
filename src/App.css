@@ -1,38 +1,73 @@
+/* Horizontal scroll prevent karne ke liye perfect hai */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base Container */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Sections ko full screen aur properly align karne ke liye */
+section {
+  width: 100%;
+  min-height: 100vh;
+  /* Har section kam se kam puri screen cover karega */
+  padding: 80px 20px;
+  /* Navbar ke niche space dene ke liye */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Images ko responsive banane ke liye */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animations (Optional: Agar aap logo use kar rahe ho) */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+    /* Mobile par thoda kam padding */
+  }
+
+  /* Social buttons ko mobile par adjust karna zaroori hai */
+  .social-fixed-buttons {
+    bottom: 20px;
+    right: 10px;
+  }
+
+  .social-fixed-buttons img {
+    width: 35px;
+    /* Mobile par buttons thode chhote */
+    height: 35px;
   }
 }

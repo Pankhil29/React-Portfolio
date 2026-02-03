@@ -4,6 +4,8 @@ import "../styles/projects.css";
 import calculator from "../assets/calculator.png";
 import tictactoe from "../assets/tictactoe.png";
 import numberpuzzle from "../assets/numberpuzzle.png";
+import blog from "../assets/blog.png";
+
 const projects = [
   {
     title: "React Calculator",
@@ -25,6 +27,20 @@ const projects = [
     img: numberpuzzle,
     github: "https://github.com/Pankhil29/Number-Puzzle-Game",
     demo: " https://pankhil29.github.io/Number-Puzzle-Game/",
+  },
+  {
+    title: "Blog App",
+    description: "A simple blog application built with Django.",
+    img: blog,
+    github: "https://github.com/Pankhil29/django-blog",
+    demo: "https://django-blog-8swb.onrender.com/",
+  },
+  {
+    title: "E-commerce Website",
+    description: "E-commerce website built with Django.",
+    img: blog,
+    github: "https://github.com/Pankhil29/ShoppingKart-django",
+    demo: "https://shoppingkart-django.onrender.com/",
   },
 ];
 

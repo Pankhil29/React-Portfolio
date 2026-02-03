@@ -9,14 +9,12 @@ import java from "../assets/java.png";
 import c from "../assets/c.png";
 import cpp from "../assets/c++logo.png";
 import github from "../assets/github.png";
+import python from "../assets/python.webp";
+import django from "../assets/django.webp";
 
 const combinedSkills = [
   {
-    left: {
-      name: "HTML",
-      level: 90,
-      icon: html,
-    },
+    left: { name: "HTML", level: 90, icon: html },
     right: { name: "CSS", level: 85, icon: css },
   },
   {
@@ -29,11 +27,11 @@ const combinedSkills = [
   },
   {
     left: { name: "Java", level: 80, icon: java },
-    right: {
-      name: "Github",
-      level: 80,
-      icon: github,
-    },
+    right: { name: "Github", level: 80, icon: github },
+  },
+  {
+    left: { name: "Python", level: 80, icon: python },
+    right: { name: "Django", level: 80, icon: django },
   },
 ];
 
@@ -44,30 +42,45 @@ function Skills() {
       id="skills"
     >
       <Container>
-        <h2 className="text-center fw-bold mb-5">My Skills</h2>
+        <h2 className="text-center fw-bold mb-5" data-aos="fade-up">
+          My Skills
+        </h2>
         {combinedSkills.map((row, index) => (
-          <Row key={index} className="align-items-center mb-4">
-            <Col md={6} className="pe-md-5">
-              <div className="d-flex justify-content-between align-items-center">
+          <Row key={index} className="mb-4">
+            {/* Left Skill */}
+            <Col md={6} className="mb-4 mb-md-0 px-md-4" data-aos="fade-right">
+              <div className="d-flex justify-content-between align-items-center mb-2">
                 <span className="fw-semibold">{row.left.name}</span>
                 <img
                   src={row.left.icon}
                   alt={row.left.name}
                   className="skill-icon"
+                  style={{ width: "30px", height: "30px" }}
                 />
               </div>
-              <ProgressBar now={row.left.level} className="custom-bar" />
+              <ProgressBar
+                now={row.left.level}
+                label={`${row.left.level}%`}
+                className="custom-bar"
+              />
             </Col>
-            <Col md={6} className="ps-md-5">
-              <div className="d-flex justify-content-between align-items-center">
+
+            {/* Right Skill */}
+            <Col md={6} className="px-md-4" data-aos="fade-left">
+              <div className="d-flex justify-content-between align-items-center mb-2">
                 <span className="fw-semibold">{row.right.name}</span>
                 <img
                   src={row.right.icon}
                   alt={row.right.name}
                   className="skill-icon"
+                  style={{ width: "30px", height: "30px" }}
                 />
               </div>
-              <ProgressBar now={row.right.level} className="custom-bar" />
+              <ProgressBar
+                now={row.right.level}
+                label={`${row.right.level}%`}
+                className="custom-bar"
+              />
             </Col>
           </Row>
         ))}

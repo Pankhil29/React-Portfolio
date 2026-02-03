@@ -13,7 +13,7 @@ function Hero() {
       <Container>
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-start">
-            <h1 className="display-4 fw-bold mb-3">
+            <h1 className="display-4  mb-3">
               Hi, I'm <span className="text-info">Pankhil Patel</span>
             </h1>
             <h3 className="mb-3">
@@ -27,8 +27,8 @@ function Hero() {
                 backSpeed={30}
                 loop
               /> */}
-              Fr<span className="text-info">o</span>ntend Devel
-              <span className="text-info">o</span>per
+              B<span className="text-info">a</span>kend Develop
+              <span className="text-info">e</span>r
             </h3>
             <p className="lead">
               I design and develop responsive, user-friendly websites and apps.

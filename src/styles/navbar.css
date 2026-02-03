@@ -1,25 +1,61 @@
-.navbar{
+.custom-navbar {
     background: linear-gradient(135deg, #0f172a, #1e293b) !important;
-    box-shadow: 0 3px 10px rgba(0,0, 0, 0.4);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    padding: 15px 0;
 }
-.navbar-brand{
+
+.navbar-brand {
     font-size: 1.4rem;
     font-weight: bold;
     color: #38bdf8 !important;
     transition: all 0.3s ease;
-
 }
-.navbar-brand:hover{
+
+.navbar-brand:hover {
     color: #67e8f9 !important;
 }
-.nav-link{
-    /* color: #cbd5e1 !important; */
+
+.nav-link {
+    color: #cbd5e1 !important;
+    /* Text color visibility */
     font-weight: 500;
     margin-left: 15px;
-    transition: all 0.3s ease ;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: #38bdf8 !important;
     transform: translateY(-2px);
+}
+
+/* Active Link styling - Ye zaroori hai UX ke liye */
+.active-link {
+    color: #38bdf8 !important;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    bottom: 0;
+    left: 20%;
+    background-color: #38bdf8;
+    transition: 0.3s;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 991px) {
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .active-link::after {
+        display: none;
+        /* Mobile par line ki jagah sirf color change rakhein */
+    }
 }

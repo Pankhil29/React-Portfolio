@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -12,7 +12,8 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-import Resume from "./assets/resume.png";
+// Assets
+import ResumeIcon from "./assets/resume.png";
 import Github from "./assets/Githubwhite.png";
 import Linkedin from "./assets/linkedin.png";
 
@@ -20,72 +21,97 @@ function App() {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    // Initialization
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+
+    let isPaused = false;
 
     const handleScroll = () => {
-      const sections = document.querySelectorAll("section[id]");
-      let current = "home";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop; // distance of top of( page ,to section)
-        const sectionHeight = section.offsetHeight; //total height of that section
-        if (window.scrollY >= sectionTop - sectionHeight / 3) {
-          // /3 gives smoother effect
-          current = section.getAttribute("id");
-        }
+      if (isPaused) return;
+      isPaused = true;
+
+      // requestAnimationFrame performance ke liye best hai
+      window.requestAnimationFrame(() => {
+        const sections = document.querySelectorAll("section[id]");
+        const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute("id");
+
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            setActiveSection(sectionId);
+          }
+        });
+        isPaused = false;
       });
-      setActiveSection(current);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
+    <div className="app-container">
       <Navbar
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />
 
-      <section id="home">
-        <Hero />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="skills">
-        <Skills />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
+      <main>
+        <section id="home" className="min-vh-100">
+          <Hero />
+        </section>
+        <section id="about" className="min-vh-100">
+          <About />
+        </section>
+        <section id="skills" className="min-vh-100">
+          <Skills />
+        </section>
+        <section id="projects" className="min-vh-100">
+          <Projects />
+        </section>
+        <section id="contact" className="min-vh-100">
+          <Contact />
+        </section>
+      </main>
 
       <Footer />
 
-      <div className="social-fixed-buttons">
+      {/* Floating Social Icons */}
+      <div className="social-fixed-buttons d-flex flex-column gap-2">
         <a
-          href="/assets/resume.pdf"
-          download
+          href="/assets/resume.pdf" // Make sure this path is correct in your public folder
+          download="My_Resume.pdf"
           className="resume-button"
           title="Download Resume"
         >
-          <img src={Resume} alt="Resume" />
-        </a>
-        <a href="https://github.com/Pankhil29" target="_blank" rel="noreferrer">
-          <img src={Github} alt="github" />
+          <img src={ResumeIcon} alt="Resume" width="40" height="40" />
         </a>
         <a
-          href="https://www.linkedin.com/in/pankhil-patel-5085aa299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+          href="https://github.com/Pankhil29"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
-          <img src={Linkedin} alt="LinkedIn" />
+          <img src={Github} alt="github" width="40" height="40" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/pankhil-patel-5085aa299"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={Linkedin} alt="LinkedIn" width="40" height="40" />
         </a>
       </div>
-    </>
+    </div>
   );
 }
 
