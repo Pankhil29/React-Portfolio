@@ -38,3 +38,12 @@
     transform: translateY(0px);
   }
 }
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+    height: 50vh;
+  }
+
+
+}
