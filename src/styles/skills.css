@@ -44,3 +44,13 @@
 .skill-icon:hover {
     transform: scale(1.2);
 }
+
+@media (max-width: 768px) {
+    .skills-bars-section {
+        padding: 50px 0;
+    }
+
+    .custom-bar {
+        height: 20px;
+    }
+}

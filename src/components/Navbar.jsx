@@ -8,19 +8,17 @@ function Navbar({ activeSection, setActiveSection }) {
 
   const handleClick = (sectionId) => {
     setActiveSection(sectionId);
-    setExpanded(false); // Link click hote hi menu band ho jayega
+    setExpanded(false);
 
     const element = document.getElementById(sectionId);
     if (element) {
-      // Navbar height (80px) ko offset karne ke liye manual scroll
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+      
+      const navbarHeight = 80;
+      const targetPos =
+        element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
 
       window.scrollTo({
-        top: offsetPosition,
+        top: targetPos,
         behavior: "smooth",
       });
     }

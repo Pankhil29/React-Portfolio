@@ -12,8 +12,8 @@
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
 }
 
 .project-card img {
@@ -64,6 +64,17 @@
 
 .project-card .btn-primary:hover {
   background-color: #0ea5e9;
+}
+
+.project-img-top {
+  transition: transform 0.5s ease;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card:hover .project-img-top {
+  transform: scale(1.1);
+
 }
 
 @media (max-width: 768px) {

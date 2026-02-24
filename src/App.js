@@ -37,7 +37,7 @@ function App() {
       // requestAnimationFrame performance ke liye best hai
       window.requestAnimationFrame(() => {
         const sections = document.querySelectorAll("section[id]");
-        const scrollPosition = window.scrollY + window.innerHeight / 3;
+        const scrollPosition = window.scrollY + window.innerHeight / 1.8;
 
         sections.forEach((section) => {
           const sectionTop = section.offsetTop;
@@ -67,23 +67,12 @@ function App() {
       />
 
       <main>
-        <section id="home" className="min-vh-100">
-          <Hero />
-        </section>
-        <section id="about" className="min-vh-100">
-          <About />
-        </section>
-        <section id="skills" className="min-vh-100">
-          <Skills />
-        </section>
-        <section id="projects" className="min-vh-100">
-          <Projects />
-        </section>
-        <section id="contact" className="min-vh-100">
-          <Contact />
-        </section>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
-
       <Footer />
 
       {/* Floating Social Icons */}

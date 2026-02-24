@@ -5,6 +5,7 @@ import calculator from "../assets/calculator.png";
 import tictactoe from "../assets/tictactoe.png";
 import numberpuzzle from "../assets/numberpuzzle.png";
 import blog from "../assets/blog.png";
+import shoppingkart from "../assets/eco.png";
 
 const projects = [
   {
@@ -38,7 +39,7 @@ const projects = [
   {
     title: "E-commerce Website",
     description: "E-commerce website built with Django.",
-    img: blog,
+    img: shoppingkart,
     github: "https://github.com/Pankhil29/ShoppingKart-django",
     demo: "https://shoppingkart-django.onrender.com/",
   },
@@ -46,29 +47,42 @@ const projects = [
 
 function Projects() {
   return (
-    <section
-      className="projects-section py-5 bg-light"
-      id="projects"
-      data-aos="fade-up"
-      data-aos-duration="1300"
-      data-aos-delay="300"
-    >
+    <section className="projects-section py-5 bg-light" id="projects">
       <Container>
-        <h2 className="text-center fw-bold mb-5">My Projects</h2>
+        <h2 className="text-center fw-bold mb-5" data-aos="fade-up">
+          My Projects
+        </h2>
+
         <Row>
           {projects.map((project, index) => (
-            <Col md={4} className="mb-4" key={index}>
-              <Card className="project-card h-100">
-                <Card.Img variant="top" src={project.img} />
-                <Card.Body>
-                  <Card.Title>{project.title}</Card.Title>
-                  <Card.Text>{project.description}</Card.Text>
-                  <div className="d-flex justify-content-between">
+            <Col
+              md={4}
+              sm={6}
+              className="mb-4"
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+            >
+              <Card className="project-card h-100 shadow-sm">
+                <div className="overflow-hidden">
+                  {" "}
+                  <Card.Img
+                    variant="top"
+                    src={project.img}
+                    className="project-img-top"
+                  />
+                </div>
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title className="fw-bold">{project.title}</Card.Title>
+                  <Card.Text className="flex-grow-1">
+                    {project.description}
+                  </Card.Text>
+                  <div className="d-flex justify-content-between mt-3">
                     <Button
                       variant="outline-primary"
                       href={project.github}
                       target="_blank"
-                      className="btn"
+                      className="rounded-pill px-3"
                     >
                       Github
                     </Button>
@@ -76,7 +90,7 @@ function Projects() {
                       variant="primary"
                       href={project.demo}
                       target="_blank"
-                      className="btn"
+                      className="rounded-pill px-3"
                     >
                       Live Demo
                     </Button>

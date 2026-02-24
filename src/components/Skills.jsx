@@ -38,17 +38,22 @@ const combinedSkills = [
 function Skills() {
   return (
     <section
-      className="skills-bars-section py-5 bg-dark text-white"
+      className="skills-bars-section py-5 bg-dark text-white p-2"
       id="skills"
     >
       <Container>
         <h2 className="text-center fw-bold mb-5" data-aos="fade-up">
           My Skills
         </h2>
+
         {combinedSkills.map((row, index) => (
           <Row key={index} className="mb-4">
-            {/* Left Skill */}
-            <Col md={6} className="mb-4 mb-md-0 px-md-4" data-aos="fade-right">
+            <Col
+              md={6}
+              className="mb-4 mb-md-0 px-md-4"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               <div className="d-flex justify-content-between align-items-center mb-2">
                 <span className="fw-semibold">{row.left.name}</span>
                 <img
@@ -65,8 +70,12 @@ function Skills() {
               />
             </Col>
 
-            {/* Right Skill */}
-            <Col md={6} className="px-md-4" data-aos="fade-left">
+            <Col
+              md={6}
+              className="px-md-4"
+              data-aos="fade-up"
+              data-aos-delay={index * 100 + 50}
+            >
               <div className="d-flex justify-content-between align-items-center mb-2">
                 <span className="fw-semibold">{row.right.name}</span>
                 <img

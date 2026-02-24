@@ -30,32 +30,80 @@
     transform: translateY(-2px);
 }
 
-/* Active Link styling - Ye zaroori hai UX ke liye */
 .active-link {
-    color: #38bdf8 !important;
+    color: #0dcaf0 !important;
+    font-weight: bold;
+
+    position: relative;
 }
 
 .active-link::after {
     content: '';
     position: absolute;
     width: 60%;
-    height: 2px;
-    bottom: 0;
+    height: 3px;
+    bottom: -5px;
     left: 20%;
     background-color: #38bdf8;
-    transition: 0.3s;
+    border-radius: 2px;
+    animation: slideIn 0.3s ease-out;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Mobile responsive adjustments */
+@keyframes slideIn {
+    from {
+        width: 0;
+        left: 50%;
+        opacity: 0;
+    }
+
+    to {
+        width: 60%;
+        left: 20%;
+        opacity: 1;
+    }
+}
+
+
+.navbar-toggler {
+    border-color: rgba(56, 189, 248, 0.5) !important;
+    padding: 4px 8px;
+}
+
+.navbar-toggler-icon {
+
+    filter: invert(1) brightness(100%);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25) !important;
+}
+
 @media (max-width: 991px) {
+    .navbar-collapse {
+        background: #0f172a;
+
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
     .nav-link {
         margin-left: 0;
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 12px 15px !important;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .active-link::after {
         display: none;
-        /* Mobile par line ki jagah sirf color change rakhein */
+
+    }
+
+    .active-link {
+        background: rgba(56, 189, 248, 0.1);
+        border-bottom: 1px solid #0dcaf0 !important;
+        color: #0dcaf0 !important;
+        border-radius: 5px;
     }
 }

@@ -1,6 +1,7 @@
 /* Horizontal scroll prevent karne ke liye perfect hai */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
 body {
@@ -13,6 +14,11 @@ body {
 /* Base Container */
 .App {
   text-align: center;
+}
+
+.app-container {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Sections ko full screen aur properly align karne ke liye */
