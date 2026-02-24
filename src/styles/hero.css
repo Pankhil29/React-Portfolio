@@ -38,9 +38,8 @@
 /* Mobile Responsive CSS */
 @media (max-width: 768px) {
   .hero-section {
-    min-height: auto;
-    /* Zabardasti 100vh mat rakho */
-    height: auto;
+    min-height: auto !important;
+    height: auto !important;
     /* Content ke hisaab se badhne do */
     padding: 100px 0 40px 0;
     /* Top padding navbar ke liye aur bottom padding spacing ke liye */
