@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/React-Portfolio/static/css/main.c7c413f6.css",
-    "main.js": "/React-Portfolio/static/js/main.590f4f77.js",
+    "main.css": "/React-Portfolio/static/css/main.05447535.css",
+    "main.js": "/React-Portfolio/static/js/main.ec277fe3.js",
+    "static/media/eco.png": "/React-Portfolio/static/media/eco.30b978647b41708fa597.png",
     "static/media/blog.png": "/React-Portfolio/static/media/blog.88013f95260a19219bf0.png",
+    "static/media/about.png": "/React-Portfolio/static/media/about.a87d8828d39d9fc2985d.png",
     "static/media/profilephoto.jpg": "/React-Portfolio/static/media/profilephoto.fcd8b6ee44b22fbf5aa6.jpg",
     "static/media/calculator.png": "/React-Portfolio/static/media/calculator.f6adf419fe9e5e26f001.png",
     "static/media/numberpuzzle.png": "/React-Portfolio/static/media/numberpuzzle.2fd21a62ba98a375d4af.png",
     "static/media/django.webp": "/React-Portfolio/static/media/django.2c12c36eb9d2a5c4765e.webp",
     "static/media/python.webp": "/React-Portfolio/static/media/python.83c89f5c711f9f36c609.webp",
     "index.html": "/React-Portfolio/index.html",
-    "main.c7c413f6.css.map": "/React-Portfolio/static/css/main.c7c413f6.css.map",
-    "main.590f4f77.js.map": "/React-Portfolio/static/js/main.590f4f77.js.map"
+    "main.05447535.css.map": "/React-Portfolio/static/css/main.05447535.css.map",
+    "main.ec277fe3.js.map": "/React-Portfolio/static/js/main.ec277fe3.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7c413f6.css",
-    "static/js/main.590f4f77.js"
+    "static/css/main.05447535.css",
+    "static/js/main.ec277fe3.js"
   ]
 }
