@@ -10,7 +10,7 @@ function Hero() {
       className="hero-section d-flex align-items-center text-white"
     >
       <Container>
-        <Row className="align-items-center">
+        <Row className="align-items-center flex-column-reverse flex-md-row">
           <Col md={6} className="text-center text-md-start">
             <div data-aos="fade-up" data-aos-delay="100">
               <h1 className="display-4 mb-3">
@@ -44,7 +44,7 @@ function Hero() {
             </div>
           </Col>
 
-          <Col md={6} className="text-center mt-5 mt-md-0">
+          <Col md={6} className="text-center mt-5 mt-md-0 ">
             <div
               className="hero-image-wrapper"
               data-aos="zoom-in"
